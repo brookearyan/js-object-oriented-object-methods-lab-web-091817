@@ -1,25 +1,25 @@
-function BoardMember(name, homeState, training) {
+
+function BoardMember(name, homeState, training){
   this.name = name
   this.homeState = homeState
   this.training = training
-}
 
-function veto() {
-  returns ('No, I must disagree')
-}
+  this.veto = function(){
+    return 'No, I must disagree'
+  }
+  this.approve = function(){
+    return 'You can do that!'
+  }
 
-function approve() {
-  returns ('You can do that!')
-}
+  this.doCharity = function(){
+    return "I like to help people."
+  }
 
-function doCharity() {
-  return ('I like to help people.')
-}
+  this.releasePressStatement = function(){
+    return "You will see great things from Scuber."
+  }
 
-function releasePressStatement() {
-  returns ('You will see great things from Scuber.')
-}
-
-function sayHi() {
-  returns ('"Hi, my name is ${BoardMember.name} I am from ${BoardMember.homeState}, and I was trained in ${BoardMember.training}')
+  this.sayHi = function(){
+    return `Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
+  }
 }
